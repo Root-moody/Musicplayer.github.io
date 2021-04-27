@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        background-image: url(background/phone.jpg);
+    }
+    20% {
+        background-image: url(background/airpods.jpg);
+    }
+    40% {
+        background-image: url(background/pinkheadphone.jpg);
+    }
+    60% {
+        background-image: url(background/micbaby.jpg);
+    }
+}
+
+.main {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(to right, #5e5a5a, #9dacb6);
+    opacity: 0.7;
+}
+
+.main button {
+    padding: 10px 12px;
+    margin: 0 10px;
+}
+
+.main #drop_list {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    color: #332d2d;
+}
+
+
+/*LEFT AND RIGHT PART*/
+
+.right,
+.left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*SONG IMAGE*/
+
+.left img {
+    height: 300px;
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+}
+
+
+/*BOTH RANGE SLIDER*/
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 50%;
+    outline: none;
+    height: 2px;
+    margin: 0 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #d19034;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.right input[type="range"] {
+    width: 80%;
+}
+
+
+/*VOLUME PART*/
+
+.left .volume {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left .volume p {
+    font-size: 15px;
+}
+
+.left .volume i {
+    cursor: pointer;
+    padding: 5px 7px;
+    border-radius: 70%;
+    background: #a7a7a3;
+}
+
+.left .volume i:hover {
+    background: #d19034;
+}
+
+.left .volume #volume_show {
+    padding: 15px;
+}
+
+
+/*RIGHT PART*/
+
+.right .middle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .middle button {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5%;
+    background: #a7a7a3;
+}
+
+.right #song_title {
+    position: absolute;
+    margin-left: 80px;
+    top: 60px;
+    left: 50px;
+    transform: translateX(50%);
+    text-transform: capitalize;
+    color: rgb(244, 246, 248);
+    font-size: 35px;
+}
+
+.right #artist_title {
+    position: absolute;
+    top: 105px;
+    left: 50px;
+    transform: translateX(175%);
+    text-transform: capitalize;
+    color: rgb(244, 246, 248);
+    font-size: 18px;
+}
+
+.right .duration {
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    transform: translateX(-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80px;
+    margin-top: 40px;
+}
+
+.right #auto {
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 45px;
+    border: none;
+    padding: 10px 14px;
+    color: rgb(244, 246, 248);
+    background: #a7a7a3;
+    outline: none;
+    border-radius: 10px;
+}
+
+.right #auto i {
+    margin-left: 8px;
+}
+
+#play {
+    background: #d19034;
+}
+
+.right button:hover {
+    background: #d19034;
+}
+
+.right i:before {
+    color: rgb(244, 246, 248);
+    font-size: 20px;
+}
+
+.right .song_number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    color: #332d2d;
+    border-radius: 5px;
+    background: rgb(244, 246, 248);
+}
+
+.right .song_number {
+    margin: 0 5px;
+}
