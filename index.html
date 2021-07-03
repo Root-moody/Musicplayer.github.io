@@ -22,11 +22,6 @@
             <!---SONG IMAGE-->
             <img id="song_image">
 
-            <div class="volume">
-                <p id="volume_show">90</p>
-                <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="volume_mute()"></i>
-                <input type="range" id="volume" min="0" max="100" value="90" onchange="volume_change()">
-            </div>
         </div>
 
         <!---RIGHT SIDE-->
@@ -37,30 +32,44 @@
                 <p id="total_songs">5</p>
             </div>
 
-            <!---SONG TITLE-->
-            <P id="song_title">songtitle.mp3</P>
-            <p id="artist_title">Artist name</p>
+            <!-- SONG TITLE AND CONTROLS GROUP -->
+            <div class="song-controls">
+                <!---SONG TITLE-->
+                <div class="song-title">
+                    <P id="song_title">songtitle.mp3</P>
+                    <p id="artist_title">Artist name</p>
+                </div>
 
-            <!---MIDDLE PART-->
-            <div class="middle">
-                <button onclick="previous_song()" id="previous">
-                    <i class="fa fa-step-backward" aria-hidden="true"></i>
-                </button>
-                <button onclick="justplaysong()" id="play">
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                </button>
-                <button onclick="next_song()" id="next">
-                    <i class="fa fa-step-forward" aria-hidden="true"></i>
-                </button>
+                <!---CONTROLS (PLAY, PAUSE,NEXT)-->
+                <div class="middle">
+                    <button onclick="previous_song()" id="previous">
+                        <i class="fa fa-step-backward" aria-hidden="true"></i>
+                    </button>
+                    <button onclick="justplaysong()" id="play">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </button>
+                    <button onclick="next_song()" id="next">
+                        <i class="fa fa-step-forward" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
 
-            <!--SONG DURATION PART-->
-            <div class="duration">
-                <input type="range" id="duration_slider" min="0" max="100" value="0" onchange="change_duration()">
+            <!-- DURATION AND VOLUME GROUP -->
+            <div class="duration-volume">
+                <div class="volume">
+                    <p id="volume_show">90</p>
+                    <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="volume_mute()"></i>
+                    <input type="range" id="volume" min="0" max="100" value="90" onchange="volume_change()">
+                </div>
+    
+                <!--SONG DURATION PART-->
+                <div class="duration">
+                    <input type="range" id="duration_slider" min="0" max="100" value="0" onchange="change_duration()">
+                </div>
+                <button onclick="autoplay_switch()" id="auto">Auto play
+                    <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                </button>
             </div>
-            <button onclick="autoplay_switch()" id="auto">Auto play 
-                <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
-            </button>
         </div>
     </div>
 
